@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <!-- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 
     - custom css link
   -->
   <link rel="stylesheet" href="style.css">
@@ -12,7 +13,7 @@
   <!-- 
     - google font link
   -->
- 
+
 
   <!-- splide css  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -26,154 +27,377 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 </head>
+
 <body>
- 
-      <header class="main-header fixed-top" style="background-color: black;">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg py-3">
-                <a class="navbar-brand logo-text" href="#">Artima</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto menu-links">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul>
-                    <div class="contact-info d-none d-lg-flex">
-                        <i class="fas fa-phone-alt me-2"></i> <span>+01 2345-4882-588</span>
-                    </div>
-                </div>
-            </nav>
+
+  <nav class="navbar navbar-expand-lg  fixed-top shadow-lg h-20 p-2" style="background-color: black;">
+    <div class="container-fluid ">
+      <!-- logo -->
+
+      <div class="logo d-flex align-items-center  navbar-brand">
+        <img class="" src="https://i.pinimg.com/1200x/2e/67/90/2e6790becfa7446845b5792f7c60152a.jpg" width="50px"
+          alt="">
+        <p class="text-white mx-2 mt-3">Royale Home</p>
+      </div>
+      <!-- navbar-toggler -->
+      <button class="navbar-toggler navbar-toggler-white  shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <!-- sidebar -->
+      <div style="background-color: rgb(8, 8, 8)" class="offcanvas offcanvas-end" tabindex="" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div style="border-bottom: 2px solid #F26722;" class="offcanvas-header text-dark">
+          <div class=" d-flex align-items-center logo">
+            <img class="" src="Image/logo.png" alt="">
+
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none border-0" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
-    </header>
+        <!-- sidebar -->
+        <div class="offcanvas-body justify-content-end  ayush">
+          <ul id="nav-small" class="navbar-nav justify-content-end  fs-8  flex-grow-1 pe-1  ayush">
+            <li class="nav-item mx-2 ">
+              <a class="nav-link " aria-current="page" href="#Home">Home</a>
+            </li>
 
-    <!-- hero  -->
 
- 
-<!-- 2  -->
-  <section class="hero-section">
-        <!-- Background Layers -->
-        <div class="hero-background">
-            <div class="background-layer active" id="bg-1">
-              
-            </div>
-            <div class="background-layer" id="bg-2"></div>
-            <div class="background-layer" id="bg-3"></div>
+
+            <li class="nav-item mx-2">
+              <a class="nav-link  p-2" href="#About Us">About Us</a>
+            </li>
+
+            <!-- <li class="nav-item mx-2">
+                <a class="nav-link text-gray-900 p-2" href="location.html">location</a>
+              </li> -->
+
+            <li class="nav-item mx-2">
+              <a class="nav-link  p-2" href="#Gallery">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Residential Properties
+                  </a></li>
+                <li><a class="dropdown-item" href="#">Commercial Properties
+                  </a></li>
+                <li><a class="dropdown-item" href="#">Farmhouses/Villas
+                  </a></li>
+                <li><a class="dropdown-item" href="#">ROI properties
+                  </a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link  p-2" href="#Services">Services</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+
+
+
+          </ul>
+
         </div>
-
-        <!-- Content (Always visible) -->
-        <div class="hero-content">
-          
-  <div class="container-fluid">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-12">
-                    <p class="trusted-agent-text">Trusted Real Estate Agent for HNIs</p>
-
-                    <h1 class="hero-heading mb-4">
-                        Looking To Buy or Rent a Property? <br>
-                        Find Your Dream Home With Us!
-                    </h1>
-
-                    <div class="row g-2 justify-content-center mt-5">
-                        <div class="col-md-3 col-sm-6">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>All Main Locations</option>
-                                <option value="1">Location A</option>
-                                <option value="2">Location B</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>All Status</option>
-                                <option value="1">Buy</option>
-                                <option value="2">Rent</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>All Types</option>
-                                <option value="1">Apartment</option>
-                                <option value="2">Villa</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-2 col-sm-6">
-                            <div class="d-grid">
-                                <button class="btn btn-searchh text-uppercase" type="submit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                    Search
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- 2 -->
-<div class="container p-5" style="background: url(https://www.royalerealtorsindia.com/wp-content/uploads/2021/11/sketch.jpg);">
-<div class="row">
-    <div class="col-lg-6">
-      <h1>South Delhi's Top Real Estate Agents</h1>
-      <span>Your Go-To Real Estate Agent for Premium South Delhi Properties
-        <p>Royale Realtors India is a luxury real estate agent. We help High Networth Individuals, Top Industrialists, NRIs, MNCs, and Investors by offering Personalised Real Estate bouquets services in Prime Locations of SOUTH DELHI through Premium Luxury Listings of high-end Properties, like Villas, Land, Apartments, builder floors, flats, bungalows, duplexes, triplexes or Offices.
-
-Founded In 1990, We’ve spent decades excelling in the competitive landscape of South Delhi real estate, establishing a class reputation as expert advisors serving boutique-style solutions to a niche clientele. Our business is built on communication, dedication, and transparency.
-
-The processes we have mastered have helped us to rise to the level of the best real estate agents In South Delhi. With our sharp knowledge of the local market, We’ve helped over 500 families & many multinational companies in South Delhi find their desired properties, and We are confident we can help you find yours too, or in your family or for your organization.</p>
-</span>
+      </div>
     </div>
-  <div class="col-lg-6">
-    <img src="https://i.pinimg.com/1200x/4d/c9/af/4dc9af403cd8cafc2f0cb50f8ca7c633.jpg" width="500px" alt="">
+  </nav>
+
+  <!-- hero  -->
+
+
+  <!-- 2  -->
+  <section class="hero-section">
+    <!-- Background Layers -->
+    <div class="hero-background">
+      <div class="background-layer active" id="bg-1">
+
+      </div>
+      <div class="background-layer" id="bg-2"></div>
+      <div class="background-layer" id="bg-3"></div>
+    </div>
+
+    <!-- Content (Always visible) -->
+    <div class="hero-content">
+
+      <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-12">
+            <h1 class="trusted-agent-text">Trusted Real Estate Agent for HNIs</h1>
+
+            <h2 class="hero-heading mb-4">
+              Looking To Buy or Rent a Property? <br>
+              Find Your Dream Home With Us!
+            </h2>
+
+            <div class="row g-2 justify-content-center mt-5">
+              <div class="col-md-3 col-sm-6">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>All Main Locations</option>
+                  <option value="1">Location A</option>
+                  <option value="2">Location B</option>
+                </select>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>All Status</option>
+                  <option value="1">Buy</option>
+                  <option value="2">Rent</option>
+                </select>
+              </div>
+
+              <div class="col-md-3 col-sm-6">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>All Types</option>
+                  <option value="1">Apartment</option>
+                  <option value="2">Villa</option>
+                </select>
+              </div>
+
+              <div class="col-md-2 col-sm-6">
+                <div class="d-grid">
+                  <button class="btn btn-searchh text-uppercase" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-search" viewBox="0 0 16 16">
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- 2 -->
+  <div class="container-fluid mt-5 mb-5 p-3"
+    style="background: url(https://www.royalerealtorsindia.com/wp-content/uploads/2021/11/sketch.jpg); background-size: cover; background-repeat: no-repeat; background-position:bottom; ">
+    <div class="row align-items-center justify-content-center g-3">
+      <div class="col-lg-6 about-content">
+        <h1>India's Top Real Estate </h1>
+        <span class="">Your Go-To Real Estate Agent for Premium India's Properties</span>
+        <p class="mt-3">Royale Realtors India is a luxury real estate agent. We help High Networth Individuals, Top
+          Industrialists, NRIs, MNCs, and Investors by offering Personalised Real Estate bouquets services in Prime
+          Locations of India's through Premium Luxury Listings of high-end Properties, like Villas, Land,
+          Apartments, builder floors, flats, bungalows, duplexes, triplexes or Offices.
+
+          Founded In 1990, We’ve spent decades excelling in the competitive landscape of India's real estate,
+          establishing a class reputation as expert advisors serving boutique-style solutions to a niche clientele. Our
+          business is built on communication, dedication, and transparency.
+
+          The processes we have mastered have helped us to rise to the level of the best real estate agents In India's
+          With our sharp knowledge of the local market, We’ve helped over 500 families & many multinational
+          companies in South India's find their desired properties, and We are confident we can help you find yours too,
+          or in your family or for your organization.</p>
+
+      </div>
+      <div class="col-lg-6">
+        <img src="https://i.pinimg.com/1200x/4d/c9/af/4dc9af403cd8cafc2f0cb50f8ca7c633.jpg" width="600px" alt=""
+          class="img-fluid">
+      </div>
+
+    </div>
   </div>
 
-</div>  
-</div>
+  
+  <div class="container-fluid mt-5 mb-5 p-3"
+    style="background: url(https://www.royalerealtorsindia.com/wp-content/uploads/2021/11/sketch.jpg); background-size: cover; background-repeat: no-repeat; background-position:bottom; ">
+    <div class="row align-items-center justify-content-center g-3">
+      <div class="col-lg-6">
+        <img src="https://i.pinimg.com/1200x/33/89/29/33892908d9c7cf9606592959a39fde53.jpg" width="600px" alt=""
+          class="img-fluid">
+      </div>
+
+      <div class="col-lg-6 about-content">
+        <h1>Delivering Luxury, Trust, and
+          Customer Excellence Since 1990</h1>
+        <span class="">Your Go-To Real Estate Agent for Premium India's Properties</span>
+        <p class="mt-3">We assure you a niche experience with personalised services, step-by-step guidance, transparent
+          dealings, fair market pricing, honest commitments, and a well-organised programme to make your next real
+          estate transaction a smooth and memorable one. We believe in educating our customers with in-depth analysis of
+          the latest Real estate market information, current design trends, and prevailing prices.
+          We only work with Reputed Builders who are known for their exceptional workmanship, solid aesthetically
+          beautiful buildings, fair dealings, timely delivery and have proven track record.
+          And for sellers, we aim to fetch the best price, reliable legal guidance, and a streamlined process with a
+          one-stop solution to sum up all your real estate aspirations on a single table.</p>
+
+      </div>
+
+
+    </div>
+  </div>
 
 
 
+<!-- new section  -->
+  <div class="container-fluid mt-5 mb-5" style="padding: 20px; background-size: cover; background-repeat: no-repeat; background:linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.3)),  url(https://i.pinimg.com/1200x/38/ff/29/38ff296f9cd2096f2b78e472f2f15afd.jpg); height: 40vh; background-position: center;">
+    <div class="col-lg-12">
+      <div class="new-content text-center mt-5">
+        <h1>Please follow us a suitable time for a meeting, with one-to-one discussion, over a coffee, to understand
+          your requirements in a better way so that we can initiate and schedule a very focused and productive program
+          suiting your needs, taste, budget, and preferences.</h1>
+      </div>
+    </div>
+  </div>
 
 
+  <!-- new section  -->
+
+<!-- new section testimonial start  -->
+ <div class="container-fluid mt-5 mb-5">
+    <div class="new-project-title ssection_title d-flex justify-content-between">
+      <div class="project-heading col-lg-12">
+        <h1 class="text-center">
+Clients Testimonials</h1>
+              <h6 class="text-center">How Our Real Estate Agents Deliver Excellence!</h6>
 
 
+      </div>
+      <!-- <button class="btn-neww">Learn more</button> -->
+    </div>
+    <div class="row">
+      <div class="swiper mySwiperr mt-5">
+        <div class="swiper-wrapper vibhor">
 
+          <div class="swiper-slide">
 
+            <div class="testimonial">
+              <i class="ri-double-quotes-l display-5"></i>
+              <h4 class="text-center">The service provided is very good and friendly</h4>
+              <p class="text-center">constantly in the loop of how everything was going. The professionalism of every member of the team, friendliness and commitment to getting the best sale for us, was second to none. We are delighted with the result they achieved for our family and the experience of working with Lalit and the team. I wouldn't hesitate to recommend them or work with them again. I can see how they have achieved the reputation they have and why they are so well regarded for the work they do. Thank you all for your hard work.
 
+ 
+ 
+ 
+ 
+</p>
+             <!-- 2 -->
+            </div>
 
-   <!-- 
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="testimonial">
+              <i class="ri-double-quotes-l display-5"></i>
+              <h4>The service provided is very good and friendly</h4>
+              <p>I ordered a custom chair at Luxterior, and the results exceeded my expectations. It was exactly what I
+                wanted!</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="assets/pic-2.jpg" alt="user">
+                <div class="ms-3">
+                  <h6 class="mb-0">Leslie Aleksander</h6>
+                  <small>Housewife</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="testimonial">
+              <i class="ri-double-quotes-l display-5"></i>
+              <h4>The service provided is very good and friendly</h4>
+              <p>I ordered a custom chair at Luxterior, and the results exceeded my expectations. It was exactly what I
+                wanted!</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="assets/pic-2.jpg" alt="user">
+                <div class="ms-3">
+                  <h6 class="mb-0">Leslie Aleksander</h6>
+                  <small>Housewife</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="testimonial">
+              <i class="ri-double-quotes-l display-5"></i>
+              <h4>The service provided is very good and friendly</h4>
+              <p>I ordered a custom chair at Luxterior, and the results exceeded my expectations. It was exactly what I
+                wanted!</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="assets/pic-2.jpg" alt="user">
+                <div class="ms-3">
+                  <h6 class="mb-0">Leslie Aleksander</h6>
+                  <small>Housewife</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="testimonial">
+              <i class="ri-double-quotes-l display-5"></i>
+              <h4>The service provided is very good and friendly</h4>
+              <p>I ordered a custom chair at Luxterior, and the results exceeded my expectations. It was exactly what I
+                wanted!</p>
+              <div class="d-flex align-items-center mt-3">
+                <img src="assets/pic-2.jpg" alt="user">
+                <div class="ms-3">
+                  <h6 class="mb-0">Leslie Aleksander</h6>
+                  <small>Housewife</small>
+                </div>
+              </div>
+            </div>
+            <!-- dhh -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
     - custom js link
   -->
-     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const layers = document.querySelectorAll('.background-layer');
-            let currentIndex = 0;
-            const transitionDuration = 3000;
-            const displayDuration = 6000;  
+    <script>
+    var swiper = new Swiper(".mySwiper", {});
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const layers = document.querySelectorAll('.background-layer');
+      let currentIndex = 0;
+      const transitionDuration = 3000;
+      const displayDuration = 6000;
 
-            function cycleBackgrounds() {
-                layers[currentIndex].classList.remove('active');
+      function cycleBackgrounds() {
+        layers[currentIndex].classList.remove('active');
 
-                currentIndex = (currentIndex + 1) % layers.length; 
+        currentIndex = (currentIndex + 1) % layers.length;
 
-                layers[currentIndex].classList.add('active');
+        layers[currentIndex].classList.add('active');
 
-                console.log('Switched to background index:', currentIndex);
-            }
+        console.log('Switched to background index:', currentIndex);
+      }
 
-          
-            setInterval(cycleBackgrounds, displayDuration);
 
-            layers[0].classList.add('active');
-        });
-    </script>
+      setInterval(cycleBackgrounds, displayDuration);
+
+      layers[0].classList.add('active');
+    });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
@@ -303,17 +527,11 @@ The processes we have mastered have helped us to rise to the level of the best r
       spaceBetween: 20,
       loop: true,
       breakpoints: {
-        420: {
+        1200: {
           slidesPerView: 1,
           //   spaceBetween: 20,
         },
-        // 480: {
-        //     slidesPerView: 2,
-        // },
-        768: {
-          slidesPerView: 2,
-          //   spaceBetween: 40,
-        },
+       
 
       },
 
@@ -385,6 +603,7 @@ The processes we have mastered have helped us to rise to the level of the best r
         titleSrc: 'title'
       });
     });
-  </script>   
+  </script>
 </body>
+
 </html>
