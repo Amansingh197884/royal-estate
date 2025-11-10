@@ -1,0 +1,172 @@
+
+/* fade-up states */
+.fade-up {
+    opacity: 0;
+    transform: translateY(var(--offset, 22px)) scale(.985);
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2, .65, .2, 1);
+    transition-delay: var(--delay, 0ms);
+    will-change: opacity, transform;
+}
+
+.fade-up.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+p,
+a,
+input,
+li{
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.navbar {
+    border-bottom: 1px solid rgba(154, 150, 150, 0.5);
+    /* padding: 20px !important; */
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.nav-item .nav-link{
+    color: #fff;
+}
+
+        .hero-section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1; 
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        @keyframes zoom-pan {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.15);
+            }
+        }
+
+        .background-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover; 
+            background-position: center;
+            opacity: 0; 
+            transition: opacity 2s ease-in-out, transform 20s linear; 
+            z-index: 0;
+            will-change: opacity, transform; 
+
+            animation: zoom-pan 25s infinite alternate; 
+            
+        }
+
+        #bg-1 {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.3)), url('https://i.pinimg.com/736x/33/ea/72/33ea72df319eabf301e0de9e6d807f22.jpg');
+        }
+
+        #bg-2 {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.3)), url('https://i.pinimg.com/1200x/71/a6/37/71a6370b8403f42a19d5a2f16c0ad5ca.jpg');
+        }
+
+        #bg-3 {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.3)), url('https://i.pinimg.com/736x/12/21/a2/1221a250abb1788e5d079a23bc19d69d.jpg');
+        }
+
+        .background-layer.active {
+            opacity: 1;
+        }
+
+        .hero-content {
+            z-index: 10;
+            color: #fff;
+            text-align: center;
+            /* padding: 20px; */
+            /* max-width: 90%; */
+            width: 100% ;
+        }
+
+ 
+  .btn-searchh {
+           height: 49px;
+    transition: all .2s 
+ease-in-out;
+    border: none !important;
+    background: #d7a405 !important;
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+        border-radius: 0 !important;
+
+        }
+        
+        .btn-search:hover {
+            background-color: #e69500;
+            border-color: #e69500;
+            color: #000;
+        }
+
+        /* Styling for the dropdowns/inputs to give them a clean look */
+        .form-control, .form-select {
+            height: 50px !important; /* Consistent height */
+            border-radius: 0; /* Square edges */
+        }
+
+        /* Styling for the 'Trusted Agent' text */
+        .trusted-agent-text {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        /* Styling for the main heading */
+        .hero-heading {
+            font-size: 2.5rem; /* Larger font for desktop */
+            font-weight: 700;
+        }
+
+        /* The green WhatsApp button (floating) */
+      .form-select {
+    background: #fff !important;
+    color: gray !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    /* height: 44px !important; */
+    line-height: 44px !important;
+    border: 1px solid rgba(128, 128, 128, .2) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
