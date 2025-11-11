@@ -127,18 +127,18 @@ li{
         }
 
         #bg-1 {
-            background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/259580/pexels-photo-259580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.40)), url('https://images.pexels.com/photos/259580/pexels-photo-259580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
         }
 
         #bg-2 {
-            background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/8135114/pexels-photo-8135114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.40)), url('https://images.pexels.com/photos/8135114/pexels-photo-8135114.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
             /* background-position: top; */
             background-size: cover;
             background-repeat: no-repeat;
         }
 
         #bg-3 {
-            background-image:linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.60)), url('https://images.pexels.com/photos/8031889/pexels-photo-8031889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-image:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.40)), url('https://images.pexels.com/photos/8031889/pexels-photo-8031889.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
         }
 
         .background-layer.active {
@@ -252,3 +252,243 @@ ease-in-out;
     border-left: .3em solid transparent;
     color: #000000 !important;
 }
+
+/* card  */
+ :root {
+            --card-transition-duration: 0.3s;
+            --main-font-color: #333;
+            --sub-text-color: #666;
+            /* Specific colors from the image */
+            --gold-ring-color: #e9a300; 
+            --sale-badge-color: #e9a300; 
+            --price-color: #e9a300;
+            --dark-overlay: rgba(0, 0, 0, 0.5);
+            --light-bg: #fff; /* Card background is pure white */
+            --body-bg: #f5f5f5; /* Subtle off-white body background */
+        }
+        .property-card {
+            border: 1px solid #eee; /* Very subtle border */
+            border-radius: 0.5rem; /* Slightly less rounded than before to match image */
+            overflow: hidden; 
+            transition: all var(--card-transition-duration) ease-in-out;
+            cursor: pointer;
+            background-color: var(--light-bg);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Initial softer shadow */
+        }
+
+        /* HOVER EFFECT: Subtle lift and enhanced shadow */
+        .property-card:hover {
+            /* transform: translateY(-5px); Subtle lift */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+        }
+
+        /* Image Container for Aspect Ratio and Overlay Management */
+        .card-img-container {
+            position: relative;
+            padding-top: 60%; /* Aspect ratio for the image */
+            overflow: hidden;
+            background-color: #e9ecef;
+        }
+
+        .card-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--card-transition-duration) ease;
+        }
+
+        /* HOVER EFFECT: Subtle image zoom */
+        .property-card:hover .card-img-container img {
+            transform: scale(1.05); /* Subtle zoom */
+        }
+
+        /* Image Overlays (Agent & Sale Badge) */
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px 20px;
+            color: white;
+            z-index: 10;
+            /* Gradient to fade into the image */
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0));
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end; 
+        }
+        
+        /* Agent Profile Styling with Gold Ring */
+        .agent-profile {
+            /* Position relative for the checkmark badge */
+            position: relative;
+        }
+
+        .agent-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* Gold ring effect is border on the image */
+            border: 2px solid var(--gold-ring-color); 
+            box-shadow: 0 0 0 2px white; /* Inner white border to separate gold from image */
+            object-fit: cover;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .agent-checkmark {
+            position: absolute;
+            bottom: -5px;
+            left: 35px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--gold-ring-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            border: 2px solid white;
+        }
+
+
+        /* Sale Badge Styling (For Sale Button) */
+        .sale-badge {
+            background-color: var(--sale-badge-color) !important;
+            color: var(--main-font-color) !important;
+            font-weight: 600;
+            padding: 6px 15px;
+            border-radius: 0.3rem;
+            align-self: flex-end;
+            margin-bottom: -5px;
+              
+  
+        }
+
+        /* Top Left Icon Badge (Photo count) */
+        .photo-count-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--dark-overlay);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            z-index: 15;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        /* Property Stats Section Custom Layout */
+        .property-stats {
+            padding-top: 10px; /* Space between title and stats */
+            margin-top: 5px;
+            /* Uses Bootstrap's d-flex/gap utilities */
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .stat-item .label {
+            color: var(--sub-text-color);
+            font-size: 0.85rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .stat-item .icon-value {
+            /* display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            /* color: var(--main-font-color); */
+            
+        }
+
+        .stat-item i {
+            font-size: 1.5rem; /* Larger icon size */
+            color: var(--gold-ring-color);
+            margin-right: 5px;
+        }
+
+        /* Price and Action Row */
+        .price-action-row {
+            border-top: none; /* The line is on the stats section */
+            padding-top: 15px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-text {
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: var(--price-color); /* The specific gold/orange color */
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: var(--sub-text-color);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* Action Icons Styling and Hover */
+        .action-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .action-icons i {
+            font-size: 1.2rem;
+            color: var(--sub-text-color);
+            margin-left: 15px;
+            transition: color var(--card-transition-duration) ease, transform 0.1s ease-out;
+        }
+
+        .action-icons i:hover {
+            color: var(--gold-ring-color); /* Highlight on hover */
+            transform: scale(1.1);
+        }
+        
+        .arrow-pair {
+            display: flex;
+            flex-direction: column;
+            line-height: 0.8; /* Compact vertical spacing */
+        }
+
+        .arrow-pair i {
+            margin-left: 15px;
+            font-size: 1rem;
+        }
+
+        /* Title and Location Styling */
+        .card-title {
+            /* font-size: 1.5rem !important; */
+            /* font-weight: 600 !important; */
+            color: black;
+            line-height: 1.3;
+        }
+
+        .location-text {
+            color: var(--sub-text-color);
+            font-size: 0.65rem;
+            font-weight: 500;
+        }
+
+        .location-text i {
+            font-size: 1rem;
+            color: var(--sub-text-color);
+        }
