@@ -1,0 +1,121 @@
+
+
+        /* 4. Feature Bar Styling */
+        .feature-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /* Use a lighter, more transparent background to match the original */
+            /* background-color: rgba(255, 255, 255, 0.15);  */
+            padding: 2rem 0; 
+            z-index: 20;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden; /* CRITICAL: Hides the content that overflows for sliding effect */
+        }
+        
+        /* --- Slider Specific Styles (Desktop Default > 992px) --- */
+        .feature-item-width {
+            width: 200px;
+            min-width: 200px; 
+            max-width: 200px;
+        }
+        .slider-track {
+            display: flex; /* Aligns all feature items horizontally */
+            width: 2000px; /* 10 items * 200px */
+            /* 30 seconds for one loop, continuous */
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused; /* Pause animation on mouse hover */
+        }
+        
+        /* Animation keyframes: slide the width of the original 5 items (1000px) */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-1000px); }
+        }
+
+        .feature-item {
+            flex-shrink: 0; /* Prevents items from shrinking */
+            text-align: center;
+            padding: 0.5rem 1rem; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: normal; /* Allows text to wrap within the item */
+        }
+
+        .feature-item i {
+            font-size: 1.7rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+          
+            
+        }
+        .box{
+  background-color: #ffffff2d;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        .feature-item p {
+            font-size: 0.8rem;
+            margin: 0;
+           font-weight: 500;
+            /* opacity: 0.8; */
+        }
+
+
+        /* Tablet Adjustments (769px to 991px) */
+        @media (min-width: 269px) and (max-width: 991px) {
+            .feature-item-width {
+                width: 180px;
+                min-width: 180px; 
+                max-width: 180px;
+            }
+            /* Total width: 10 items * 180px = 1800px */
+            .slider-track {
+                width: 1800px;
+                 animation: slide 30s linear infinite;
+            }
+            /* Slide distance: 5 items * 180px = 900px */
+            @keyframes slide {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-900px); }
+            }
+        }
+        
+        /* Mobile Specifics (max-width: 768px) */
+        @media (max-width: 768px) {
+            
+            .feature-bar {
+                padding: 1.5rem 0;
+            }
+            
+            /* Mobile Slider Adjustments */
+            .feature-item-width {
+                width: 150px; /* Smaller width on mobile */
+                min-width: 150px;
+                max-width: 150px;
+            }
+            /* Total width: 10 items * 150px = 1500px */
+            .slider-track {
+                width: 1500px;
+            }
+            /* Slide distance: 5 items * 150px = 750px */
+            @keyframes slide {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-750px); }
+            }
+            
+            .feature-item p {
+                font-size: 0.65rem;
+                margin-top: 0.25rem;
+            }
+            .feature-item i {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+        }
+        
