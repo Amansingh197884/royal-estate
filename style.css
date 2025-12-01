@@ -191,22 +191,19 @@ ease-in-out;
             color: #000;
         }
 
-        /* Styling for the dropdowns/inputs to give them a clean look */
         .form-control, .form-select {
-            height: 50px !important; /* Consistent height */
-            border-radius: 0; /* Square edges */
+            height: 50px !important; 
+            border-radius: 0; 
         }
 
-        /* Styling for the 'Trusted Agent' text */
         .trusted-agent-text {
             font-size: 0.9rem;
             opacity: 0.7;
             margin-bottom: 5px;
         }
 
-        /* Styling for the main heading */
         .hero-heading {
-            font-size: 2.5rem; /* Larger font for desktop */
+            font-size: 2.5rem;
             font-weight: 700;
         }
 
@@ -214,15 +211,11 @@ ease-in-out;
       .form-select {
     /* background: #fff !important; */
     color: gray !important;
-    /* padding-left: 15px !important;
-    padding-right: 15px !important; */
-    height: 44px !important;
-    /* line-height: 44px !important; */
+     height: 44px !important;
     border: 1px solid rgba(128, 128, 128, .2) !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     text-shadow: none !important;
-    /* text-align: center; */
 }
 .bootstrap-select>.dropdown-toggle {
     position: relative;
