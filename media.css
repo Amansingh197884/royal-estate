@@ -118,4 +118,47 @@
                 margin-bottom: 0;
             }
         }
-        
+            .footer-bg {
+            background-color: #212529; /* Dark gray/black background */
+            color: #ccc; /* Light gray text */
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem; /* Slightly smaller base font */
+        }
+        .footer-link, .footer-link:hover {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+        .footer-title {
+            color: #fff; /* White titles */
+            font-size: 0.95rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+        .legal-text {
+            font-size: 0.65rem; /* Very small text for the legal disclaimer */
+            color: #999;
+            line-height: 1.5;
+        }
+        .logo {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+        .social-icon-circle {
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #444;
+            color: #fff;
+            margin-right: 8px;
+            transition: background-color 0.3s;
+        }
+        .social-icon-circle:hover {
+            background-color: #666;
+        }
