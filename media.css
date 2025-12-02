@@ -1,4 +1,12 @@
 
+  :root {
+            --primary-color: #10354A;
+            --accent-color: #FDCB00; 
+            --text-color: #555;
+            --heading-color: #212529;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-strong: rgba(0, 0, 0, 0.15);
+        }
 
         .feature-bar {
             position: absolute;
@@ -148,3 +156,365 @@
         .social-icon-circle:hover {
             background-color: #666;
         }
+           
+  .contact-hero {
+            background: url('images/Untitled\ design\ \(3\).png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .container, .form-container, .map-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            max-width: 500px;
+        }
+
+        .contact-form-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-card .form-control,
+        .contact-form-card .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            border-radius: 8px;
+        }
+        .contact-form-card .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .contact-info-embedded {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .contact-info-embedded .icon-text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .contact-info-embedded svg {
+            color: #ffffff; 
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .map-section {
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border: 0;
+        }
+
+        @media (max-width: 991px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            .contact-info-embedded {
+                margin-top: 20px;
+                padding-top: 15px;
+            }
+            .contact-hero {
+                padding: 60px 0;
+            }
+            .map-container iframe {
+                height: 350px; 
+            }
+        }
+
+        /* commmit  */
+
+             
+   
+
+
+        .portfolio-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            height: 100%; 
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow-strong);
+        }
+
+        .card-img-container {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-card:hover .card-img-top{
+            transform: scale(1.05); 
+        }
+
+
+        .info-card {
+            background-color: white;
+            padding: 25px;
+            position: relative;
+            z-index: 1;
+            min-height: 100px; 
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background:  #a37e6b;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            z-index: 2;
+            transition: background 0.3s ease;
+        }
+
+        .icon-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            z-index: 3;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-card:hover .icon-badge {
+            transform: rotate(5deg) scale(1.1); 
+        }
+
+        .info-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #a37e6b;
+            line-height: 1;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-card:hover .info-number {
+            color: var(--primary-color);
+        }
+
+        .info-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin-bottom: 10px;
+        }
+
+        .info-text {
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .highlight-card {
+            background-color:  #a37e6b;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .highlight-card .website-link {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        .highlight-card .website-link::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--accent-color);
+            border-radius: 5px;
+        }
+
+        .highlight-card h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 991.98px) {
+            .highlight-card {
+                height: 250px;
+                min-height: 250px; 
+            }
+            .highlight-card h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .portfolio-card {
+                min-height: 350px;
+            }
+        }
+
+        /* new  */
+           .city-section {
+            padding: 4rem 0;
+        }
+
+        .section-subtitle {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #6c757d;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #212529; 
+            margin-bottom: 3rem;
+        }
+
+        .city-card-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .city-listing {
+            display: flex;
+            align-items: center;
+            padding: 0.9rem 0; 
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .city-listing:hover {
+            opacity: 0.9;
+        }
+
+        .city-image-wrapper {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            flex-shrink: 0; 
+        }
+
+        .city-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .city-name {
+            font-weight: 600;
+            color: #212529;
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .city-count {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.1rem;
+        }
+
+        .next-arrow {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border: 1px solid #dee2e6;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+   
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.75rem;
+            }
+            .city-card-group {
+                gap: 2.5rem;
+                margin-bottom: 1.5rem; 
+            }
+        }
+a{
+    text-decoration: none !important;
+}
