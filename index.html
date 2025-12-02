@@ -1601,7 +1601,7 @@
 
                     <div class="d-flex align-items-center mt-3 mt-lg-0">
                         <span style="font-size: 0.75rem;">
-                            &copy; Copyright 2022 | <a href="#" class="footer-link">Privacy Policy</a>
+                            &copy; Copyright 2025 | <a href="#" class="footer-link">Privacy Policy</a>
                         </span>
                     </div>
                 </div>
@@ -1832,6 +1832,22 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
   <script>
+    jQuery(function ($) {
+      var $navbar = $('.navbar');
+      $(window).scroll(function (event) {
+        var $current = $(this).scrollTop();
+        if ($current > 0) {
+          $navbar.addClass('navbar-color');
+
+        }
+        else {
+          $navbar.removeClass('navbar-color');
+        }
+      }
+      );
+    });
+  </script>
+    <script>
     jQuery(function ($) {
       var $navbar = $('.navbar');
       $(window).scroll(function (event) {
