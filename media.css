@@ -518,3 +518,138 @@
 a{
     text-decoration: none !important;
 }
+
+
+ /* second slider  */
+ .newcard{
+background-color: #fff;
+padding: 40px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ }
+
+       .feature-card {
+          
+            width: 100%;
+            padding: 2rem 0;
+            z-index: 20;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .feature-width {
+            width: 200px;
+            min-width: 200px;
+            max-width: 200px;
+        }
+
+        .slider-card {
+            display: flex;
+            width: 2000px;
+            animation: slide 30s linear infinite;
+
+        }
+
+        .slider-card:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-1000px);
+            }
+        }
+
+        .feature-item {
+            flex-shrink: 0;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: normal;
+        }
+
+        .feature-item i {
+            font-size: 1.7rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+
+
+        }
+
+        .box {
+            background-color: #ffffff2d;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .feature-item p {
+            font-size: 0.8rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+
+        @media (min-width: 269px) and (max-width: 991px) {
+            .feature-width {
+                width: 180px;
+                min-width: 180px;
+                max-width: 180px;
+            }
+
+            .slider-card {
+                width: 1800px;
+            }
+
+            @keyframes slide {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-900px);
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .feature-card {
+                padding: 1.5rem 0;
+            }
+
+            .feature-width {
+                width: 150px;
+                min-width: 150px;
+                max-width: 150px;
+            }
+
+            .slider-card {
+                width: 1500px;
+            }
+
+            @keyframes slide {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-750px);
+                }
+            }
+
+            .feature-item p {
+                font-size: 0.65rem;
+                margin-top: 0.25rem;
+            }
+
+            .feature-item i {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+        }
+ /* second slider end  */
