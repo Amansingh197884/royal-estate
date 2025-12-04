@@ -916,3 +916,20 @@ animation: runningTime 7s linear 1 forwards;
         padding: 10px 18px;
         border-radius: 6px;
       }
+
+.all-img img{
+    width: 70px !important;
+}      
+@media (max-width: 800px) {
+    .amenities h4 {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+.amenities h4 {
+    font-size: 16px;
+}
+.amenities img{
+    width: 60px;
+}
