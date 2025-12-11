@@ -100,7 +100,7 @@ li{
         }
 @media screen and (max-width:670px){
     .hero-section{
-        height: 60vh;
+        height: 75vh;
     }
 }
         .hero-background {
