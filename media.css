@@ -717,7 +717,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         .gallery-item img {
             width: 100%;
-            height: 300px; /* Fixed height for visual consistency on desktop/tablet */
+            height: 300px; 
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
@@ -766,8 +766,11 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+            overflow: hidden;
+            /* Semi-transparent black overlay */
             display: flex;
+             /* background-color: rgba(0, 0, 0, 0.4); */
+              background-color: rgba(58, 50, 54, 0.4);
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -775,7 +778,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             transition: opacity 0.3s ease; /* Smooth transition for overlay visibility */
             border-radius: 0.75rem; /* Match image border radius */
             text-align: center;
-            padding: 20px;
+            /* padding: 20px; */
         }
 
         .gallery-item:hover .gallery-overlay {
@@ -786,7 +789,9 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             color: white;
             margin-bottom: 15px;
             font-size: 1.1rem;
-            font-weight: 400;
+            font-weight: 500;
+                font-family: "Jost", sans-serif !important;
+
         }
         
         /* Style for the "View" button */
@@ -795,6 +800,8 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             border-color: #a87e5b !important;
             font-weight: 600;
             padding: 8px 30px;
+                font-family: "Jost", sans-serif !important;
+
             border-radius: 0.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
