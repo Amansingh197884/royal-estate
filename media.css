@@ -657,7 +657,10 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             padding-top: 50px;
             padding-bottom: 50px;
         }
-
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: #FDCB00 !important;
+}
         /* --- GALLERY TABS STYLING --- */
         .nav-pills .nav-link {
             color: #333;
@@ -668,7 +671,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
         .nav-pills .nav-link.active, 
         .nav-pills .nav-link:hover {
-            background-color: #a87e5b; /* A warm, earth-toned color for active/hover */
+            background-color: #a87e5b; 
             color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -787,8 +790,8 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         
         /* Style for the "View" button */
         .view-btn {
-            background-color: #a87e5b;
-            border-color: #a87e5b;
+            background-color: #a87e5b !important;
+            border-color: #a87e5b !important;
             font-weight: 600;
             padding: 8px 30px;
             border-radius: 0.5rem;
@@ -1029,3 +1032,30 @@ h1.banner-price {
         padding: 28px;
     }
 }
+
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #7b5b42;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: #777;
+        }
+        .testimonial p{
+            font-size: 18px;
+    /* margin-top: 1rem !important; */
+    font-family: "Jost", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    color: #595b5d !important;
+    line-height: 1.5;
+        }
