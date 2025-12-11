@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Blog Section with Animation</title>
+      <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+     <!-- splide css  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Remix ionicon -->
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+
+   <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .blog-section .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .blog-section .swiper-navigation {
+            display: flex;
+            gap: 8px;
+        }
+
+        .blog-section .btn-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+            color: #333;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .blog-section .swiper-button-next-custom {
+            background-color: #333;
+            color: #fff;
+            border-color: #333;
+        }
+
+        .blog-section .btn-nav:hover:not(.swiper-button-next-custom) {
+            background-color: #f0f0f0;
+        }
+        
+        
+        .blog-section .blog-card {
+            background: #fff; 
+            border: none;
+            padding-bottom: 20px; 
+            border-radius: 8px; 
+            overflow: hidden; 
+             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .blog-section .blog-card:hover {
+            /* Lift Effect */
+            /* transform: translateY(8px);  */
+            /* Subtle Shadow */
+           
+        }
+
+        .blog-section .blog-img-wrapper {
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+            line-height: 0; 
+        }
+
+        /* Image Zoom Hover Effect */
+        .blog-section .blog-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            
+            /* Animation Transition for zoom */
+            transition: transform 0.4s ease-out;
+        }
+
+        .blog-section .blog-card:hover .blog-img {
+            transform: scale(1.05);
+        }
+
+        .blog-section .card-body {
+            padding: 0 15px !important;
+        }
+
+        .blog-section .card-category {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #6c757d;
+        }
+
+        .blog-section .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #333;
+        }
+
+        .blog-section .read-blog-btn {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333; 
+            text-decoration: none;
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            text-align: left;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .blog-section .read-blog-btn:hover {
+            color: #007bff;
+        }
+
+        .blog-section .collapse-content {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee; 
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .blog-section .swiper-pagination {
+            position: relative;
+            bottom: -20px !important;
+            text-align: left !important;
+        }
+
+        .blog-section .swiper-pagination-bullet {
+            background: #ccc;
+            opacity: 1;
+            width: 6px;
+            height: 6px;
+            margin: 0 4px;
+            transition: all 0.3s;
+        }
+
+        .blog-section .swiper-pagination-bullet-active {
+            background: #333;
+            width: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg  fixed-top shadow-lg h-20 p-2">
+    <div class="container-fluid ">
+      <!-- logo -->
+
+      <div class="logo d-flex align-items-center  navbar-brand">
+
+
+      </div>
+      <!-- navbar-toggler -->
+      <button class="navbar-toggler navbar-toggler-white  shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <!-- sidebar -->
+      <div style="background-color: rgb(255, 255, 255)" class="offcanvas offcanvas-end" tabindex="" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div style="border-bottom: 2px solid #F26722;" class="offcanvas-header text-dark">
+          <div class=" d-flex align-items-center logo">
+            <img class="" src="Image/logo.png" alt="">
+
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none border-0" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <!-- sidebar -->
+        <div class="offcanvas-body justify-content-end  ayush">
+          <ul id="nav-small" class="navbar-nav justify-content-end  fs-8  flex-grow-1 pe-1 align-items-center ayush">
+            <li class="nav-item mx-2 ">
+              <a class="nav-link " aria-current="page" href="#Home">Home</a>
+            </li>
+
+
+
+            <li class="nav-item mx-2">
+              <a class="nav-link  p-2" href="all.html">About Us</a>
+            </li>
+
+            <!-- <li class="nav-item mx-2">
+                <a class="nav-link text-gray-900 p-2" href="location.html">location</a>
+              </li> -->
+
+            <li class="nav-item mx-2">
+              <a class="nav-link  p-2" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Residential Properties
+                  </a></li>
+                <li><a class="dropdown-item" href="#">Commercial Properties
+                  </a></li>
+                <li><a class="dropdown-item" href="#">Farmhouses/Villas
+                  </a></li>
+                <li><a class="dropdown-item" href="#">ROI properties
+                  </a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link  p-2" href="contact.html">Services</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+
+
+
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+   <!-- new  -->
+<section class="About-us">
+  <header class="hero-section container-fluid d-flex justify-content-center align-items-center">
+        <div class="hero-content text-center">
+            <h1 class="display-1 text-white fw-bold mb-4">INTERIOR TRENDS</h1>
+
+            <div class="btn-group hero-btn-group" role="group" aria-label="Login and Sign Up buttons">
+                <a class="btn hero-btn log-in-btn" href="index.html">HOME</a>
+                <button type="button" class="btn hero-btn sign-up-btn">Gallery</button>
+            </div>
+        </div>
+    </header>
+</section>
+<!-- new  -->
+<section class="blog-section py-5 mt-5">
+    <div class="container-fluid">
+        
+        <div class="row align-items-center mb-4">
+            <div class="col-8">
+                <h2 class="section-title">Our Latest Blogs</h2>
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+                <div class="swiper-navigation">
+                    <button class="swiper-button-prev-custom btn-nav"><</button>
+                    <button class="swiper-button-next-custom btn-nav">></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper blogSwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/1200x/f7/bf/bd/f7bfbd2790aac0718e9f4ce075f876e7.jpg" class="blog-img" alt="Woman working on a laptop">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1 mt-3">Web Solution</p>
+                            <!-- <h5 class="card-title mb-3">Make a better website solution for your product.</h5> -->
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog1" aria-expanded="false" aria-controls="collapseBlog1">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog1">
+                                <div class="collapse-content">
+                                    This paragraph contains the introductory snippet of the blog. It pops out smoothly when the user clicks 'Read Blog'. This is the additional content you requested!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/736x/09/87/95/09879535011b8f94de145661059fd225.jpg" class="blog-img" alt="Abstract color contrast art">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1">UI Interface</p>
+                            <h5 class="card-title mb-3">The Science of Color Contrast – An Expert Designer’s Guide</h5>
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog2" aria-expanded="false" aria-controls="collapseBlog2">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog2">
+                                <div class="collapse-content">
+                                    Understanding color contrast is crucial for accessibility and design impact. This section provides a sneak peek into the key principles discussed in the full article.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/1200x/a6/44/91/a6449101d81731a30254d352607d6069.jpg" class="blog-img" alt="People in a colorful urban setting">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1">Web Interface</p>
+                            <h5 class="card-title mb-3">SEO Made Simple: A Step by Step Guide for 2020</h5>
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog3" aria-expanded="false" aria-controls="collapseBlog3">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog3">
+                                <div class="collapse-content">
+                                    Learn the basics of SEO optimization, including keyword research and on-page techniques, to boost your website's ranking in search results quickly.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/736x/92/40/55/924055b550306b67352c9a6d588848ab.jpg" class="blog-img" alt="Pink abstract art">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1">Interface Design</p>
+                            <h5 class="card-title mb-3">Make a better solution for your product.</h5>
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog4" aria-expanded="false" aria-controls="collapseBlog4">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog4">
+                                <div class="collapse-content">
+                                    A focus on user-centric design principles ensures that your product is intuitive, effective, and delightful for all users from the first click.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/736x/f7/8a/d0/f78ad0134db0176f4c133cc341a8d477.jpg" class="blog-img" alt="Minimalist design concept">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1">Web UI</p>
+                            <h5 class="card-title mb-3">Mastering the Grid: Essential Layout Techniques for Modern Websites</h5>
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog5" aria-expanded="false" aria-controls="collapseBlog5">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog5">
+                                <div class="collapse-content">
+                                    Learn about CSS Grid and Flexbox layouts. Proper grid implementation leads to responsive, organized, and clean website interfaces across all screen sizes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            
+        </div>
+        
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.blogSwiper', {
+        loop: false,
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 30 },
+            992: { slidesPerView: 3, spaceBetween: 40 },
+            1200: { slidesPerView: 4, spaceBetween: 40 }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next-custom',
+            prevEl: '.swiper-button-prev-custom',
+        },
+    });
+</script>
+
+
+
+</body>
+</html>

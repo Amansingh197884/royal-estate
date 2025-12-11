@@ -1087,3 +1087,205 @@ h1.banner-price {
     margin-top: 19px;
 }
         }
+
+
+/* Abou          */
+:root{
+    --transition-speed: 0.3s;
+}
+ .About-us .hero-section {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            
+                  background-image: url('images/city-sunset.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative; 
+        }
+
+        .About-us .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.45); 
+            z-index: 1; 
+        }
+
+        .About-us .hero-content {
+            z-index: 2; 
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        .About-us .hero-content h1 {
+            font-size: 5rem; 
+            letter-spacing: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+
+       
+        .About-us .hero-btn-group {
+            border-radius: 50px; 
+            overflow: hidden;
+            box-shadow: 0 0 0 2px #ffffff; 
+        }
+
+        .About-us .hero-btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 0.05rem;
+            border: none;
+            transition: all var(--transition-speed) ease-in-out; 
+        }
+
+        .About-us .log-in-btn {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+      
+        .About-us .sign-up-btn {
+            background-color:rgba(255, 255, 255, 0.85) !important;
+            color: #333333;
+        }
+
+       
+        .About-us .log-in-btn:hover {
+            background-color: rgba(255, 255, 255, 1); 
+            color: #000000;
+            transform: scale(1.05); 
+        }
+
+        .About-us .sign-up-btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+            color: #000000;
+            transform: scale(1.05); 
+        }
+
+        @media (max-width: 768px) {
+            .About-us .hero-content h1 {
+                font-size: 3rem; 
+                letter-spacing: 0.2rem;
+            }
+
+            .About-us .hero-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+         :root {
+            --primary-color: #333333;
+            --secondary-color: #777777;
+            --accent-color: #a08c69; /* Color similar to the icon outlines in the image */
+            --transition-speed: 0.3s;
+        }
+
+        /* Base Section Styling */
+        .why-choose-us-section {
+            padding: 80px 0;
+            background-color: #f8f8f8; /* Light gray background to separate section */
+        }
+
+        /* Left Column Title Styling */
+        .why-choose-us-section .main-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+         .why-choose-us-section .main-text {
+            color: var(--secondary-color);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+         .why-choose-us-section .view-all-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 0; /* Square button as in the image */
+            transition: background-color var(--transition-speed);
+        }
+
+         .why-choose-us-section .view-all-btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Feature Card Styling */
+         .why-choose-us-section .feature-item {
+            padding: 20px 15px;
+            transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed);
+            cursor: pointer;
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                        background-color: #fff;
+                        text-align: start !important;
+
+        }
+        
+        /* Subtle Hover Animation: Lift and Shadow */
+         .why-choose-us-section .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+         .why-choose-us-section .feature-icon-container {
+            margin-bottom: 15px;
+        }
+
+        /* Icon Styling to match the image's aesthetic */
+     
+
+         .why-choose-us-section .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+         .why-choose-us-section .feature-description {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            line-height: 1.5;
+        }
+
+        /* 2. Responsiveness Adjustments */
+
+        /* On medium devices, the features are stacked 2 per row */
+        @media (max-width: 991.98px) {
+             .why-choose-us-section .feature-column {
+                margin-bottom: 30px;
+            }
+        }
+        
+        /* Adjust layout for smaller screens */
+        @media (max-width: 767.98px) {
+             .why-choose-us-section .why-choose-us-section {
+                padding: 40px 0;
+            }
+             .why-choose-us-section .main-heading {
+                font-size: 2rem;
+                text-align: center;
+            }
+             .why-choose-us-section .main-text {
+                text-align: center;
+            }
+            .view-all-btn-container {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+
+        /* contact  */
+        .bg-dark-4 {
+    background-color: #B07E50;
+    color: #fff;
+}
+
+/* team  */
