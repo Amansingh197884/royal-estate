@@ -1001,7 +1001,7 @@ h1.banner-price {
 }
 @media (max-width: 768px) {
     .banner-text {
-        top: 16%;
+        top: 4%;
         left: 0;
         padding: 0 12px;
     }
@@ -1009,7 +1009,7 @@ h1.banner-price {
 
 @media (max-width: 1500px) {
     .banner-text {
-        top: 22%;
+        /* top: 22%; */
     }
 }
 @media (max-width: 768px) {
@@ -1064,5 +1064,19 @@ h1.banner-price {
             .contact-info-embedded .icon-text {
 display: block;   
 margin-bottom: 15px;
+}
+.new-ty{
+    display: none;
+}
+h1.banner-price {
+    font-size: 17px;
+    background: #cdaa6a;
+    text-shadow: unset;
+    width: fit-content;
+    line-height: unset;
+    color: #fff;
+    padding: 6px 25px;
+    box-shadow: 0px 0px 16px #c1915799;
+    margin-top: 19px;
 }
         }
