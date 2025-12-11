@@ -452,6 +452,7 @@
             padding: 0.9rem 0; 
             transition: all 0.2s ease-in-out;
             cursor: pointer;
+            justify-content: center;
         }
 
         .city-listing:hover {
@@ -1058,4 +1059,10 @@ h1.banner-price {
     font-style: normal;
     color: #595b5d !important;
     line-height: 1.5;
+        }
+        @media screen and (max-width:992px){
+            .contact-info-embedded .icon-text {
+display: block;   
+margin-bottom: 15px;
+}
         }
