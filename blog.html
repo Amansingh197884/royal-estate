@@ -160,6 +160,37 @@
             width: 18px;
             border-radius: 5px;
         }
+        /* 1 */
+         .blog-change .nav-pills .nav-link {
+            border: 1px solid #dee2e6;
+            color: #6c757d;
+            background: white;
+            margin-right: 10px;
+            border-radius: 8px;
+            padding: 8px 20px;
+        }
+        .blog-change .nav-pills .nav-link.active {
+            background-color: #031516 !important;
+            color: white !important;
+            border-color: #031516;
+        }
+        .blog-change .blog-img {
+            border-radius: 24px;
+            width: 100%;
+            /* height: auto; */
+            height: 400px;
+        }
+        .blog-change .news-tag {
+            background-color: #f1f3f5;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+        }
+        .nav-pills{
+            justify-content: start;
+            align-items: start;
+        }
     </style>
 </head>
 
@@ -260,18 +291,82 @@
 
             <div class="btn-group hero-btn-group" role="group" aria-label="Login and Sign Up buttons">
                 <a class="btn hero-btn log-in-btn" href="index.html">HOME</a>
-                <button type="button" class="btn hero-btn sign-up-btn">Gallery</button>
+                <button type="button" class="btn hero-btn sign-up-btn">Blog</button>
             </div>
         </div>
     </header>
 </section>
+<!-- new  -->
+
+<div class="container-fluid py-5 blog-change">
+    <h1 class="">Blog & articles</h1>
+
+    <ul class="nav nav-pills mb-5 flex-nowrap overflow-auto pb-2" id="blogTabs" role="tablist">
+        <li class="nav-item">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all">All</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#marketing">Marketing Tips</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#business">Business Strategies</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#industry">Industry Insights</button>
+        </li>
+        <li class="nav-item">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#client">Client Success</button>
+        </li>
+    </ul>
+
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="https://i.pinimg.com/1200x/0f/d6/f0/0fd6f0ed12a91277c61327633ce840b5.jpg" alt="Work" class="blog-img img-fluid">
+        </div>
+
+        <div class="col-lg-6 ps-lg-5">
+            <span class="news-tag mb-3">News</span>
+            
+            <div class="tab-content" id="blogTabsContent">
+                <div class="tab-pane fade show active" id="all">
+                    <h2 class="fw-bold h1">Maximizing Efficiency in Operations</h2>
+                    <p class="text-muted my-4">We offer a comprehensive range of services designed to meet the unique needs of your business. From strategy development to risk management.</p>
+                </div>
+                
+                <div class="tab-pane fade" id="marketing">
+                    <h2 class="fw-bold h1">Marketing Growth Secrets</h2>
+                    <p class="text-muted my-4">Learn how to scale your reach using modern digital marketing tools and data-driven insights for better ROI.</p>
+                </div>
+
+                <div class="tab-pane fade" id="business">
+                    <h2 class="fw-bold h1">Strategy for Scale</h2>
+                    <p class="text-muted my-4">Building a sustainable business model requires long-term planning and effective risk assessment.</p>
+                </div>
+
+                   <div class="tab-pane fade" id="business">
+                    <h2 class="fw-bold h1">Strategy for Scale</h2>
+                    <p class="text-muted my-4">Building a sustainable business model requires long-term planning and effective risk assessment.</p>
+                </div>
+
+                   <div class="tab-pane fade" id="business">
+                    <h2 class="fw-bold h1">Strategy for Scale</h2>
+                    <p class="text-muted my-4">Building a sustainable business model requires long-term planning and effective risk assessment.</p>
+                </div>
+                
+                </div>
+
+            <button class="btn btn-dark px-4 py-2 mt-2" style="border-radius: 8px; background-color: #031516;">Read more</button>
+        </div>
+    </div>
+</div>
+
 <!-- new  -->
 <section class="blog-section py-5 mt-5">
     <div class="container-fluid">
         
         <div class="row align-items-center mb-4">
             <div class="col-8">
-                <h2 class="section-title">Our Latest Blogs</h2>
+                <h2 class="">Our Latest Blogs</h2>
             </div>
             <div class="col-4 d-flex justify-content-end">
                 <div class="swiper-navigation">
@@ -312,8 +407,8 @@
                             <img src="https://i.pinimg.com/736x/09/87/95/09879535011b8f94de145661059fd225.jpg" class="blog-img" alt="Abstract color contrast art">
                         </div>
                         <div class="card-body px-0 pt-3">
-                            <p class="card-category text-uppercase mb-1">UI Interface</p>
-                            <h5 class="card-title mb-3">The Science of Color Contrast – An Expert Designer’s Guide</h5>
+                            <p class="card-category text-uppercase mb-1 mt-3">UI Interface</p>
+                            <!-- <h5 class="card-title mb-3">The Science of Color Contrast – An Expert Designer’s Guide</h5> -->
                             
                             <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog2" aria-expanded="false" aria-controls="collapseBlog2">
                                 Read Blog →
@@ -334,8 +429,8 @@
                             <img src="https://i.pinimg.com/1200x/a6/44/91/a6449101d81731a30254d352607d6069.jpg" class="blog-img" alt="People in a colorful urban setting">
                         </div>
                         <div class="card-body px-0 pt-3">
-                            <p class="card-category text-uppercase mb-1">Web Interface</p>
-                            <h5 class="card-title mb-3">SEO Made Simple: A Step by Step Guide for 2020</h5>
+                            <p class="card-category text-uppercase mb-1 mt-3">Web Interface</p>
+                            <!-- <h5 class="card-title mb-3">SEO Made Simple: A Step by Step Guide for 2020</h5> -->
                             
                             <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog3" aria-expanded="false" aria-controls="collapseBlog3">
                                 Read Blog →
@@ -356,8 +451,8 @@
                             <img src="https://i.pinimg.com/736x/92/40/55/924055b550306b67352c9a6d588848ab.jpg" class="blog-img" alt="Pink abstract art">
                         </div>
                         <div class="card-body px-0 pt-3">
-                            <p class="card-category text-uppercase mb-1">Interface Design</p>
-                            <h5 class="card-title mb-3">Make a better solution for your product.</h5>
+                            <p class="card-category text-uppercase mb-1 mt-3">Interface Design</p>
+                            <!-- <h5 class="card-title mb-3">Make a better solution for your product.</h5> -->
                             
                             <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog4" aria-expanded="false" aria-controls="collapseBlog4">
                                 Read Blog →
@@ -378,8 +473,8 @@
                             <img src="https://i.pinimg.com/736x/f7/8a/d0/f78ad0134db0176f4c133cc341a8d477.jpg" class="blog-img" alt="Minimalist design concept">
                         </div>
                         <div class="card-body px-0 pt-3">
-                            <p class="card-category text-uppercase mb-1">Web UI</p>
-                            <h5 class="card-title mb-3">Mastering the Grid: Essential Layout Techniques for Modern Websites</h5>
+                            <p class="card-category text-uppercase mb-1 mt-3">Web UI</p>
+                            <!-- <h5 class="card-title mb-3">Mastering the Grid: Essential Layout Techniques for Modern Websites</h5> -->
                             
                             <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog5" aria-expanded="false" aria-controls="collapseBlog5">
                                 Read Blog →
@@ -402,6 +497,146 @@
         
     </div>
 </section>
+
+
+<!-- 2 -->
+<section class="blog-section py-5 mt-5">
+    <div class="container-fluid">
+        
+        <div class="row align-items-center mb-4">
+            <div class="col-8">
+                <h2 class=" ">Latest insights and trends </h2>
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+                <div class="swiper-navigation">
+                    <button class="swiper-button-prev-custom btn-nav"><</button>
+                    <button class="swiper-button-next-custom btn-nav">></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="swiper blogSwiper">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/1200x/f7/bf/bd/f7bfbd2790aac0718e9f4ce075f876e7.jpg" class="blog-img" alt="Woman working on a laptop">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1 mt-3">Web Solution</p>
+                            <!-- <h5 class="card-title mb-3">Make a better website solution for your product.</h5> -->
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog1" aria-expanded="false" aria-controls="collapseBlog1">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog1">
+                                <div class="collapse-content">
+                                    This paragraph contains the introductory snippet of the blog. It pops out smoothly when the user clicks 'Read Blog'. This is the additional content you requested!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/736x/09/87/95/09879535011b8f94de145661059fd225.jpg" class="blog-img" alt="Abstract color contrast art">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1 mt-3">UI Interface</p>
+                            <!-- <h5 class="card-title mb-3">The Science of Color Contrast – An Expert Designer’s Guide</h5> -->
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog2" aria-expanded="false" aria-controls="collapseBlog2">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog2">
+                                <div class="collapse-content">
+                                    Understanding color contrast is crucial for accessibility and design impact. This section provides a sneak peek into the key principles discussed in the full article.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/1200x/a6/44/91/a6449101d81731a30254d352607d6069.jpg" class="blog-img" alt="People in a colorful urban setting">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1 mt-3">Web Interface</p>
+                            <!-- <h5 class="card-title mb-3">SEO Made Simple: A Step by Step Guide for 2020</h5> -->
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog3" aria-expanded="false" aria-controls="collapseBlog3">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog3">
+                                <div class="collapse-content">
+                                    Learn the basics of SEO optimization, including keyword research and on-page techniques, to boost your website's ranking in search results quickly.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/736x/92/40/55/924055b550306b67352c9a6d588848ab.jpg" class="blog-img" alt="Pink abstract art">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1 mt-3">Interface Design</p>
+                            <!-- <h5 class="card-title mb-3">Make a better solution for your product.</h5> -->
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog4" aria-expanded="false" aria-controls="collapseBlog4">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog4">
+                                <div class="collapse-content">
+                                    A focus on user-centric design principles ensures that your product is intuitive, effective, and delightful for all users from the first click.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="card blog-card border-0">
+                        <div class="blog-img-wrapper">
+                            <img src="https://i.pinimg.com/736x/f7/8a/d0/f78ad0134db0176f4c133cc341a8d477.jpg" class="blog-img" alt="Minimalist design concept">
+                        </div>
+                        <div class="card-body px-0 pt-3">
+                            <p class="card-category text-uppercase mb-1 mt-3">Web UI</p>
+                            <!-- <h5 class="card-title mb-3">Mastering the Grid: Essential Layout Techniques for Modern Websites</h5> -->
+                            
+                            <button class="read-blog-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBlog5" aria-expanded="false" aria-controls="collapseBlog5">
+                                Read Blog →
+                            </button>
+                            
+                            <div class="collapse" id="collapseBlog5">
+                                <div class="collapse-content">
+                                    Learn about CSS Grid and Flexbox layouts. Proper grid implementation leads to responsive, organized, and clean website interfaces across all screen sizes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="swiper-pagination"></div>
+            
+        </div>
+        
+    </div>
+</section>
+ <!-- 2 -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
