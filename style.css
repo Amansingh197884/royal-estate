@@ -948,3 +948,10 @@ animation: runningTime 7s linear 1 forwards;
 .amenities img{
     width: 60px;
 }
+.btn-main{
+    background-color: #a08c69;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    
+}
